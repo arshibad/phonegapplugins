@@ -5,7 +5,7 @@
     version   = "1.0">
 
 <name>TestingPlugins</name>
-<gap:plugin name="genesis.plugins.calendar" />
+<gap:plugin name="nl.x-services.plugins.calendar" />
 <gap:plugin name="nl.x-services.plugins.socialsharing" />
 <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.3.2">
     <param name="APP_ID" value="" />
