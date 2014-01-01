@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.test.app"
+    version   = "1.0">
+
+<name>TestingPlugins</name>
+<gap:plugin name="nl.x-services.plugins.calendar" version="1.0" /> 
+<gap:plugin name="nl.x-services.plugins.socialsharing" />
+<gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.3.2">
+    <param name="APP_ID" value="" />
+    <param name="APP_NAME" value="" />
+</gap:plugin>
+<gap:plugin name="de.websector.datepicker" />
+<preference name="phonegap-version" value="2.9.0" />
+<preference name="permissions" value="none"/>
+<feature name="Camera">
+    <param name="ios-package" value="CDVCamera" />
+</feature>
+<description>
+Testing plugins.
+</description>
+
+<icon src="icon.png" />   <!-- should be in root dir. let it be of size 72 -->
+<icon src="icon.png" default="true" />
+<icon src="icons/ios/Icon-Small.png" gap:platform="ios" width="29" height="29" />
+<icon src="icons/ios/Icon-Small-50.png" gap:platform="ios" width="50" height="50" />
+<icon src="icons/ios/Icon.png" gap:platform="ios" width="57" height="57" />
+<icon src="icons/ios/Icon-Small-2x.png" gap:platform="ios" width="58" height="58" />
+<icon src="icons/ios/Icon-72.png" gap:platform="ios" width="72" height="72" />
+<icon src="icons/ios/Icon-76.png" gap:platform="ios" width="76" height="76" />
+<icon src="icons/ios/Icon-Small-50-2x.png" gap:platform="ios" width="100" height="100" />
+<icon src="icons/ios/Icon-2x.png" gap:platform="ios" width="114" height="114" />
+<icon src="icons/ios/Icon-120.png" gap:platform="ios" width="120" height="120" />
+<icon src="icons/ios/Icon-72-2x.png" gap:platform="ios" width="144" height="144" />
+<icon src="icons/ios/Icon-76-2x.png" gap:platform="ios" width="152" height="152" />
+<icon src="icons/ios/iTunesArtwork.png" gap:platform="ios" width="512" height="512" />
+<icon src="icons/ios/iTunesArtwork-2x.png" gap:platform="ios" width="1024" height="1024" />
+</widget>
