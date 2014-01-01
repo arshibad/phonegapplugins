@@ -5,18 +5,16 @@
     version   = "1.0">
 
 <name>TestingPlugins</name>
-<gap:plugin name="nl.x-services.plugins.calendar" version="1.0" /> 
+<gap:plugin name="genesis.plugins.calendar" />
 <gap:plugin name="nl.x-services.plugins.socialsharing" />
 <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.3.2">
     <param name="APP_ID" value="" />
     <param name="APP_NAME" value="" />
 </gap:plugin>
-<gap:plugin name="de.websector.datepicker" />
+
 <preference name="phonegap-version" value="2.9.0" />
 <preference name="permissions" value="none"/>
-<feature name="Camera">
-    <param name="ios-package" value="CDVCamera" />
-</feature>
+<feature name="http://api.phonegap.com/1.0/camera"/>
 <description>
 Testing plugins.
 </description>

@@ -22,7 +22,7 @@ body {
 <meta http-equiv="cleartype" content="on">
 <script src="phonegap.js"></script>
 <script src="js/plugins/SocialSharing.js"></script> 
-<script src="js/plugins/calendar.js"></script> 
+<script src="js/plugins/Calendar.js"></script>
 <script src="js/plugins/facebookconnect.js"></script> 
 
 </head>
@@ -47,10 +47,38 @@ body {
 <script src="js/plugins.js"></script>
 <script src="js/script.js"></script>
 <button onclick="window.plugins.socialsharing.share('Hi there!')">share</button>
-<button onclick="window.plugins.calendar.share('Hi there!')">calendar</button>
+<button onclick="callCalendar()">calendar</button>
 <button onclick="window.plugins.facebookconnect.share('Hi there!')">facebook</button>
 <button onclick="window.plugins.datepicker.share('Hi there!')">DatePicker</button>
-<button onclick="window.plugins.camera.share('Hi there!')">camera</button>
-
+<button onclick="callCamera();">camera</button>
+<img src="" id="myImage">
 </body>
 </html>
+<script>
+	function callCalendar(){
+		var startDate = new Date("September 24, 2013 13:00:00");
+		var endDate = new Date("September 24, 2013 14:30:00");
+		var title = "My nice event";
+		var location = "Home";
+		var notes = "Some notes about this event.";
+		var success = function(message) { alert("Success: " + JSON.stringify(message)); };
+		var error = function(message) { alert("Error: " + message); };
+	 
+		// create
+		window.plugins.calendar.createEvent(title,location,notes,startDate,endDate,success,error);
+	}
+	function callCamera(){
+		navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+			destinationType: Camera.DestinationType.DATA_URL
+	  });
+	  
+	  function onSuccess(imageData) {
+			var image = document.getElementById('myImage');
+			image.src = "data:image/jpeg;base64," + imageData;
+	  }
+	  
+	  function onFail(message) {
+			alert('Failed because: ' + message);
+	  }
+	}
+</script>
